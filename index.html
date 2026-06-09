@@ -3,28 +3,30 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DovahNDo — The Fear Academy</title>
+<title>FearAcademy — Domina la estructura</title>
+<link rel="icon" type="image/png" href="assets/media/icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Sora:wght@200;300;400;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=8" />
+<link rel="stylesheet" href="assets/css/styles.css?v=12" />
 </head>
 <body>
 
 <!-- ================= NAV ================= -->
 <nav class="nav" id="nav">
   <a class="brand" href="#top">
-    <span class="mark">D</span>
-    <span class="name">Dovah<span>N</span>Do</span>
+    <img class="brand-icon" src="assets/media/icon.png" alt="FearAcademy" />
+    <span class="name">Fear<span>Academy</span></span>
   </a>
   <div class="nav-links">
-    <a href="#escalera">Escalera</a>
-    <a href="#teorias">Teorías</a>
-    <a href="#maestro">Maestro</a>
-    <a href="#prueba">Prueba</a>
-    <a href="#acceso">Acceso</a>
+    <a href="#proposito">Propósito</a>
+    <a href="#estructuras">Estructuras</a>
+    <a href="#evelynn-infinito">Evelynn</a>
+    <a href="#decision">Decisión</a>
+    <a href="#progreso">Progreso</a>
+    <a href="#prioridades">Prioridades</a>
+    <a href="#metricas">Métricas</a>
   </div>
-  <a class="nav-cta" href="#acceso">Entrar · gratis</a>
 </nav>
 
 <!-- ================= HERO ================= -->
@@ -34,16 +36,17 @@
     <div class="hero-veil"></div>
     <div class="hero-inner" id="hero-inner">
       <div class="shell">
-        <span class="eyebrow">// Academia de alto rendimiento · Est. MMXVIII</span>
-        <audio data-charm-audio src="uploads/charm.aac" preload="auto"></audio>
+        <span class="eyebrow">// Método DovahNDo · jungla · ciencia</span>
+        <audio data-charm-audio src="assets/media/charm.aac" preload="auto"></audio>
         <h1 class="display">
-          The Fear<br />
-          <span class="line2">Academy</span>
+          Deja de improvisar.<br />
+          <span class="line2">Domina la estructura</span>
         </h1>
-        <p class="sub">No entrenamos jugadores. Forjamos la versión de ti que tus rivales <span class="gold-em">aprenderán a temer</span> — empezando por la que ves en el espejo cada derrota.</p>
+        <p class="sub">La jungla no se gana con instinto.<span class="gold-em"> Se gana con estructura, tempo y disciplina de farmeo.</span> Nadie te enseñó esto — aquí está.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#acceso">Entrar — es gratis <span class="arrow">→</span></a>
-          <a class="btn btn-ghost" href="#escalera">Ver el método</a>
+          <a class="btn btn-primary" href="#estructuras">Ver estructuras <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="#metricas">Tracker 1v5</a>
+          <button class="btn btn-meme" type="button" data-meme-open>Objetivos primero</button>
         </div>
       </div>
     </div>
@@ -56,21 +59,21 @@
       <div class="shell">
         <div class="hero-stats">
           <div class="hero-stat">
-            <div class="n"><b>+412</b> LP</div>
-            <div class="l">Media por alumno / split</div>
+            <div class="n"><b>2</b></div>
+            <div class="l">Estructuras core</div>
           </div>
           <div class="hero-stat">
-            <div class="n"><b>9.4</b>/10</div>
-            <div class="l">Suben de división</div>
+            <div class="n"><b>8</b></div>
+            <div class="l">Pathings seguidos</div>
           </div>
           <div class="hero-stat">
-            <div class="n"><b>2,800</b></div>
-            <div class="l">Aspirantes forjados</div>
+            <div class="n"><b>300</b></div>
+            <div class="l">Farm objetivo</div>
           </div>
         </div>
         <div class="scroll-hint">
           <span class="bar"></span>
-          El gank empieza al desplazar
+          Nadie mejora jugando rankeds
         </div>
       </div>
     </div>
@@ -80,109 +83,65 @@
 <!-- ================= TICKER ================= -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track" id="ticker">
-    <span>Domina la mente antes que el mapa</span>
-    <span>El miedo es disciplina</span>
-    <span>Cada partida es un espejo</span>
-    <span>No existen los malos días, solo lecciones sin leer</span>
-    <span>El tilt es una elección</span>
-    <span>Sé el jungla de tu propia vida</span>
+    <span>El entrenamiento real ocurre en la herramienta de práctica</span>
+    <span>La jungla se juega con estructura</span>
+    <span>Trackea el progreso manualmente</span>
+    <span>Farm, tempo, nivel, objetivos</span>
+    <span>Entrena antes de rankear</span>
+    <span>El elo es consecuencia de la disciplina</span>
   </div>
 </div>
 
-<!-- ================= ESCALERA ================= -->
-<section class="block" id="escalera">
+<!-- ================= DOCTRINA ================= -->
+<section class="block" id="proposito">
   <div class="shell">
     <div class="sec-head reveal">
       <div class="left">
-        <span class="eyebrow">// El método de las cinco puertas</span>
-        <h2 class="section-title">La Escalera</h2>
-        <p class="lead" style="margin-top:18px">La ascensión no es de elo — es de carácter. Cada puerta exige que mates una versión más débil de ti antes de cruzarla.</p>
+        <span class="eyebrow">// El Método DovahNDo</span>
+        <h2 class="section-title">La Doctrina</h2>
+        <p class="lead" style="margin-top:18px">Olvida el meta. El meta no existe — es un invento para los que no quieren estudiar la estructura.</p>
       </div>
       <div class="num">01</div>
     </div>
 
-    <div class="ladder">
-      <article class="rung reveal" style="--tier:#6E7A86">
-        <div class="rune">ᚺ</div>
-        <div class="rung-id">
-          <div class="tag">Hierro · Puerta I</div>
-          <div class="ttl">El Despertar</div>
-        </div>
-        <p class="rung-desc">Dejas de culpar al jungla. La primera verdad: tus derrotas tienen tu nombre escrito. Aquí aprendes a leer la repetición sin mentirte.</p>
-        <div class="rung-metrics">
-          <span class="pill">Auto-review</span>
-          <span class="pill">VOD x3 / sem</span>
-          <span class="pill">0 excusas</span>
-        </div>
-      </article>
-
-      <article class="rung reveal d1" style="--tier:#B07B4E">
-        <div class="rune">ᛒ</div>
-        <div class="rung-id">
-          <div class="tag">Bronce · Puerta II</div>
-          <div class="ttl">La Disciplina</div>
-        </div>
-        <p class="rung-desc">Los fundamentos se vuelven ritual: last hits, wave management, recalls. Lo aburrido repetido mil veces es lo que separa al que sueña del que sube.</p>
-        <div class="rung-metrics">
-          <span class="pill">CS@10 ≥ 80</span>
-          <span class="pill">Rutina diaria</span>
-          <span class="pill">Drills</span>
-        </div>
-      </article>
-
-      <article class="rung reveal d2" style="--tier:#C9CBD0">
-        <div class="rune">ᛋ</div>
-        <div class="rung-id">
-          <div class="tag">Plata · Puerta III</div>
-          <div class="ttl">El Control</div>
-        </div>
-        <p class="rung-desc">El verdadero enemigo es el tilt. Entrenas el sistema nervioso: respiración, gestión de la derrota, cierre de cola. La calma se convierte en arma.</p>
-        <div class="rung-metrics">
-          <span class="pill teal">Tilt-zero</span>
-          <span class="pill">Mindset 1:1</span>
-          <span class="pill">Cola límite</span>
-        </div>
-      </article>
-
-      <article class="rung reveal d2" style="--tier:#E0AE4A">
-        <div class="rune">ᛟ</div>
-        <div class="rung-id">
-          <div class="tag">Oro · Puerta IV</div>
-          <div class="ttl">La Visión</div>
-        </div>
-        <p class="rung-desc">Dejas de reaccionar y empiezas a predecir. Macro, tempo, win conditions: ves la partida tres movimientos antes de que suceda. El mapa habla, tú escuchas.</p>
-        <div class="rung-metrics">
-          <span class="pill gold">Macro avanzado</span>
-          <span class="pill">Draft theory</span>
-          <span class="pill">Win-con</span>
-        </div>
-      </article>
-
-      <article class="rung reveal d3" style="--tier:#33E0C6">
-        <div class="rune">ᛉ</div>
-        <div class="rung-id">
-          <div class="tag">Platino+ · Puerta V</div>
-          <div class="ttl">El Dominio</div>
-        </div>
-        <p class="rung-desc">Ya no juegas para ganar — juegas para no perderte a ti mismo. Liderazgo de equipo, shotcalling, presencia. Te conviertes en el estándar que otros temen igualar.</p>
-        <div class="rung-metrics">
-          <span class="pill teal">Shotcalling</span>
-          <span class="pill teal">Liderazgo</span>
-          <span class="pill teal">Élite</span>
-        </div>
-      </article>
+    <div class="access-grid reveal d1">
+      <div class="access-item doctrine-item">
+        <div class="ai-glyph">T</div>
+        <h4>Disputa territorial</h4>
+        <p>El LoL es una disputa territorial. Si ganas terreno, asedias al enemigo y le robas su jungla, la victoria es una consecuencia matemática — no un golpe de suerte.</p>
+      </div>
+      <div class="access-item doctrine-item">
+        <div class="ai-glyph">E</div>
+        <h4>Entrena antes de rankear</h4>
+        <p>Nadie mejora jugando rankeds. El League of Legends es una ciencia que se entrena en la herramienta de práctica. Al examen se va estudiado.</p>
+      </div>
+      <div class="access-item doctrine-item">
+        <div class="ai-glyph">C</div>
+        <h4>Errores cíclicos</h4>
+        <p>Los errores no son mala suerte — son patrones que se repiten partida tras partida. Identifícalos en un tracker, resuélvelos uno a uno.</p>
+      </div>
+      <div class="access-item doctrine-item">
+        <div class="ai-glyph">3</div>
+        <h4>Tres campamentos = una kill</h4>
+        <p>En términos de oro y experiencia, tres campamentos de jungla equivalen a una kill. Saltárselos por un gank fallido es dispararse en el pie.</p>
+      </div>
     </div>
+
+    <blockquote class="doctrine-quote reveal d2">
+      "Al examen se va estudiado. Entrena o juega ARAM."
+      <cite>— DovahNDo</cite>
+    </blockquote>
   </div>
 </section>
 
-<!-- ================= TEORÍAS ================= -->
-<section class="block alt" id="teorias">
+<!-- ================= ESTRUCTURAS ================= -->
+<section class="block alt" id="estructuras">
   <div class="shell">
     <div class="sec-head reveal">
       <div class="left">
-        <span class="eyebrow gold">// Doctrina · Lo que enseñamos de verdad</span>
-        <h2 class="section-title">Las Teorías</h2>
-        <p class="lead" style="margin-top:18px">Seis principios que reescriben cómo piensas. No son trucos de elo — son formas de mirar que se quedan contigo cuando apagas el monitor.</p>
+        <span class="eyebrow gold">// Método Dovah · jungla</span>
+        <h2 class="section-title">Estructuras de Jungla</h2>
+        <p class="lead" style="margin-top:18px">Dos rutas base para dejar de improvisar: presión y tempo con La Campana, o escalado supremo con El Infinito.</p>
       </div>
       <div class="num">02</div>
     </div>
@@ -191,197 +150,283 @@
       <article class="theory reveal">
         <div class="theory-top">
           <div class="theory-glyph">I</div>
-          <span class="pill teal">Mentalidad</span>
+          <span class="pill teal">Presión y tempo</span>
         </div>
-        <h3>La Teoría del Espejo</h3>
-        <p>Cada derrota es un reflejo, no un castigo. Si lo lees bien, la partida te dice exactamente qué versión de ti necesita morir hoy.</p>
-        <div class="idx">// 001 — fundamento</div>
+        <h3>La Campana</h3>
+        <p>Ideal para campeones que no dependen exclusivamente de su nivel 6 y pueden gankear con eficacia desde el nivel 4.</p>
+        <p><span class="teal-em">Ruta:</span> Blue → Sapo → Lobos → Picuchillos → Red → Rocosos → Escarabajo.</p>
+        <div class="idx">// doble escarabajo · ventaja desde minuto 3</div>
       </article>
 
       <article class="theory reveal d1">
         <div class="theory-top">
-          <div class="theory-glyph">II</div>
-          <span class="pill crimson">Psicología</span>
+          <div class="theory-glyph">∞</div>
+          <span class="pill gold">Escalado supremo</span>
         </div>
-        <h3>Tempo & Tilt</h3>
-        <p>El momentum emocional decide partidas antes que el oro. Aprende a cortar la espiral de tilt en tres segundos y a montar tu propia ola.</p>
-        <div class="idx">// 002 — control</div>
-      </article>
-
-      <article class="theory reveal d2">
-        <div class="theory-top">
-          <div class="theory-glyph">III</div>
-          <span class="pill gold">Macro</span>
-        </div>
-        <h3>El Mapa Invisible</h3>
-        <p>El 90% del mapa que no ves dicta tus decisiones. Entrenamos la inferencia: deducir lo oculto a partir de lo visible. Visión sin wards.</p>
-        <div class="idx">// 003 — visión</div>
-      </article>
-
-      <article class="theory reveal">
-        <div class="theory-top">
-          <div class="theory-glyph">IV</div>
-          <span class="pill teal">Hábito</span>
-        </div>
-        <h3>La Regla del 1%</h3>
-        <p>No se sube de golpe. Se sube por acumulación invisible: un detalle por partida, repetido durante un split, multiplica tu techo sin que lo notes.</p>
-        <div class="idx">// 004 — disciplina</div>
-      </article>
-
-      <article class="theory reveal d1">
-        <div class="theory-top">
-          <div class="theory-glyph">V</div>
-          <span class="pill crimson">Liderazgo</span>
-        </div>
-        <h3>El Peso de la Voz</h3>
-        <p>Un buen call vale más que una buena mecánica. La comunicación es una habilidad mecánica más: precisa, breve, sin ego. Se entrena, no se nace.</p>
-        <div class="idx">// 005 — equipo</div>
-      </article>
-
-      <article class="theory reveal d2">
-        <div class="theory-top">
-          <div class="theory-glyph">VI</div>
-          <span class="pill gold">Identidad</span>
-        </div>
-        <h3>El Arquetipo</h3>
-        <p>No copies a tu main pro. Encuentra el estilo que coincide con quién eres. Subes más rápido cuando juegas en coherencia contigo mismo.</p>
-        <div class="idx">// 006 — esencia</div>
+        <h3>El Infinito</h3>
+        <p>Diseñada para especialistas que necesitan alcanzar el nivel 6 lo antes posible, como Evelynn o Gwen, para desbloquear su potencial de carga.</p>
+        <p><span class="gold-em">Ruta:</span> Picuchillos → Rocosos → Red → Lobos → Sapo → Blue → Escarabajo.</p>
+        <div class="idx">// speedrun de experiencia · ciclo infinito</div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ================= MAESTRO ================= -->
-<section class="block" id="maestro">
+<!-- ================= EVELYNN INFINITO ================= -->
+<section class="block" id="evelynn-infinito">
   <div class="shell">
     <div class="sec-head reveal">
       <div class="left">
-        <span class="eyebrow">// El que abre las puertas</span>
-        <h2 class="section-title">El Maestro</h2>
+        <span class="eyebrow">// Evelynn · estructura del Infinito</span>
+        <h2 class="section-title">Cómo Aplicar el Infinito</h2>
+        <p class="lead" style="margin-top:18px">Esta ruta está diseñada para campeones R-dependientes que necesitan alcanzar el nivel 6 lo antes posible. Con Evelynn, el objetivo es hacer un speedrun de oro y experiencia para asfixiar al jungla rival mediante disciplina de farmeo y castigo de errores.</p>
       </div>
       <div class="num">03</div>
     </div>
 
-    <div class="maestro reveal">
-      <div class="maestro-portrait">
-        <div class="rank-badge">
-          <span class="pill teal">Challenger</span>
-          <span class="pill gold">Top 0.01%</span>
-        </div>
-        <span class="glyph">D</span>
-        <span class="ph-label">[ retrato del maestro — iconografía ]</span>
-      </div>
-      <div class="maestro-body">
-        <span class="eyebrow gold">// Fundador & Head Coach</span>
-        <h3>DovahNDo</h3>
-        <div class="role">Ex-pro · Jungla · 9 splits en Challenger</div>
-        <p class="bio">Llegué a Challenger tres veces y caí dos. La tercera no fue por mecánica — fue porque por fin entendí que el rival nunca había sido el equipo enemigo. Era yo. Mi ego, mi prisa, mi miedo a perder.</p>
-        <p class="bio">Fundé The Fear Academy para enseñar lo único que nadie te explica en una guía: que subir de elo es, en realidad, el método más honesto de conocerte. Aquí no vendemos atajos. Vendemos espejos.</p>
-        <div class="stat-grid">
-          <div class="stat-cell"><div class="n"><b>1,340</b></div><div class="l">Peak LP</div></div>
-          <div class="stat-cell"><div class="n"><b>2.8</b>k</div><div class="l">Alumnos</div></div>
-          <div class="stat-cell"><div class="n"><b>94</b>%</div><div class="l">Suben división</div></div>
-          <div class="stat-cell"><div class="n"><b>9</b></div><div class="l">Splits Chall.</div></div>
-        </div>
-      </div>
+    <div class="ladder">
+      <article class="rung reveal" style="--tier:#D8425B">
+        <div class="rune">1</div>
+        <div class="rung-id"><div class="tag">Primer passing</div><div class="ttl">Ruta inicial</div></div>
+        <p class="rung-desc">Empieza siempre en Picuchillos, porque ese cuadrante da más oro y experiencia inicial. Ruta: Picuchillos → Rocosos → Red → Lobos → Sapo → Blue → Escarabajo.</p>
+        <div class="rung-metrics"><span class="pill crimson">2:45-3:00</span><span class="pill">Smite disponible</span></div>
+      </article>
+
+      <article class="rung reveal d1" style="--tier:#E0AE4A">
+        <div class="rune">2</div>
+        <div class="rung-id"><div class="tag">Continuidad</div><div class="ttl">Ruta y media</div></div>
+        <p class="rung-desc">Tras el Escarabajo, no vuelvas a base de inmediato. Regresa a Picuchillos y Rocosos para completar una ruta y media antes del primer recall.</p>
+        <div class="rung-metrics"><span class="pill gold">Sin base temprana</span><span class="pill">Recall antes del Red</span></div>
+      </article>
+
+      <article class="rung reveal d2" style="--tier:#33E0C6">
+        <div class="rune">3</div>
+        <div class="rung-id"><div class="tag">Segundo passing</div><div class="ttl">Ventanas de acción</div></div>
+        <p class="rung-desc">Al salir de base, prioriza Red → Lobos → Sapo → Blue. Después del Sapo tendrás unos 50 segundos antes de que reaparezcan Picuchillos.</p>
+        <div class="rung-metrics"><span class="pill teal">Gank 80-100%</span><span class="pill teal">Invade si rival aparece</span></div>
+      </article>
+
+      <article class="rung reveal d3" style="--tier:#9B3BFF">
+        <div class="rune">R</div>
+        <div class="rung-id"><div class="tag">Tercer passing</div><div class="ttl">Consolidar el miedo</div></div>
+        <p class="rung-desc">Con definitiva disponible, cicla campamentos hasta que el siguiente ya esté saliendo. Tu condición de victoria es controlar tres de los cuatro cuadrantes del mapa.</p>
+        <div class="rung-metrics"><span class="pill crimson">No morir</span><span class="pill">3 cuadrantes</span></div>
+      </article>
+    </div>
+
+    <div class="access-grid reveal d2" style="margin-top:32px">
+      <div class="access-item"><div class="ai-glyph">18</div><h4>Farma hasta nivel 18</h4><p>No dejes de farmear campamentos hasta ser nivel máximo y tener full build.</p></div>
+      <div class="access-item"><div class="ai-glyph">0</div><h4>No morir</h4><p>Mantener Sello de la Oscuridad o Mejai vivo multiplica tu daño de forma barata.</p></div>
+      <div class="access-item"><div class="ai-glyph">D</div><h4>Evita objetivos trampa</h4><p>No rompas tu estructura por dragones o larvas sin presión si pierdes farm o invade.</p></div>
+      <div class="access-item"><div class="ai-glyph">S</div><h4>Divide y vencerás</h4><p>En late, usa camuflaje para presionar laterales y cazar enemigos aislados.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= PRUEBA ================= -->
-<section class="block alt" id="prueba">
+<!-- ================= DECISION ================= -->
+<section class="block alt" id="decision">
   <div class="shell">
     <div class="sec-head reveal">
       <div class="left">
-        <span class="eyebrow">// La evidencia no tiltea</span>
-        <h2 class="section-title">La Prueba</h2>
+        <span class="eyebrow gold">// Campana vs Infinito</span>
+        <h2 class="section-title">Cómo Elegir Estructura</h2>
+        <p class="lead" style="margin-top:18px">La elección depende de dos preguntas: cuánto depende tu campeón de la definitiva y cuánto impacto real tiene en early game.</p>
       </div>
       <div class="num">04</div>
     </div>
 
-    <div class="proof-stats reveal">
-      <div class="proof-stat"><div class="n teal" data-count="94" data-suffix="%">0%</div><div class="l">Suben de división</div></div>
-      <div class="proof-stat"><div class="n gold" data-count="412" data-prefix="+">0</div><div class="l">LP medio / split</div></div>
-      <div class="proof-stat"><div class="n teal" data-count="2800" data-suffix="+">0</div><div class="l">Aspirantes forjados</div></div>
-      <div class="proof-stat"><div class="n gold" data-count="61" data-suffix="%">0%</div><div class="l">Llegan a Diamante</div></div>
+    <div class="theory-grid">
+      <article class="theory reveal">
+        <div class="theory-top">
+          <div class="theory-glyph">∞</div>
+          <span class="pill gold">Elige Infinito</span>
+        </div>
+        <h3>R-Dependientes</h3>
+        <p>Úsalo con campeones que necesitan llegar al nivel 6 cuanto antes para ser funcionales. Son débiles entre niveles 1 y 4, pero escalan masivamente con oro y experiencia.</p>
+        <p><span class="gold-em">Ejemplos:</span> Evelynn, Gwen y Nocturne.</p>
+        <div class="idx">// Picuchillos primero · gank sólo si es 100% seguro</div>
+      </article>
+
+      <article class="theory reveal d1">
+        <div class="theory-top">
+          <div class="theory-glyph">I</div>
+          <span class="pill teal">Elige Campana</span>
+        </div>
+        <h3>Early Game Fuerte</h3>
+        <p>Úsala con campeones que tienen buenos ganks desde nivel 4 y no necesitan obligatoriamente su R para ser una amenaza en el mapa.</p>
+        <p><span class="teal-em">Ejemplos:</span> Viego, Lee Sin, Shaco, Diana o Mundo.</p>
+        <div class="idx">// estructura vertical · escarabajo y gank nivel 4</div>
+      </article>
     </div>
 
-    <div class="quotes">
-      <article class="quote reveal">
-        <div class="mark">“</div>
-        <p>Pasé dos años atascado en Plata culpando a mis equipos. En tres meses entendí que el problema era mi tilt. Subí a Diamante I sin tocar un mecánico nuevo.</p>
-        <div class="who">
-          <div class="av">M</div>
-          <div class="meta"><div class="nm">Marco V.</div><div class="rk">Plata IV → Diamante I</div></div>
-        </div>
+    <div class="access-grid reveal d2" style="margin-top:32px">
+      <div class="access-item"><div class="ai-glyph">F</div><h4>Flexibilidad</h4><p>Si empiezas Infinito pero te sales de tiempo por una muerte o una acción larga, la estructura puede cambiar a Campana para regularizar los respawns.</p></div>
+      <div class="access-item"><div class="ai-glyph">!</div><h4>Incompatibilidad inversa</h4><p>Puedes pasar del Infinito a la Campana, pero no puedes pasar de la Campana al Infinito de forma eficiente.</p></div>
+      <div class="access-item"><div class="ai-glyph">M</div><h4>Teoría del Miedo</h4><p>La meta final no es hacer una ruta bonita: es invadir, controlar cuadrantes enemigos y denegar experiencia.</p></div>
+      <div class="access-item"><div class="ai-glyph">+L</div><h4>Ventaja de niveles</h4><p>Si controlas los cuadrantes correctos, puedes sacar varios niveles al jungla rival y convertir la partida en una consecuencia matemática.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRESO ================= -->
+<section class="block" id="progreso">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="left">
+        <span class="eyebrow">// Autogestión del aspirante</span>
+        <h2 class="section-title">La Escalera de Progreso</h2>
+        <p class="lead" style="margin-top:18px">No entres a ranked por ansiedad. Avanza por pasos medibles hasta que la estructura sea automática.</p>
+      </div>
+      <div class="num">05</div>
+    </div>
+
+    <div class="ladder">
+      <article class="rung reveal" style="--tier:#6E7A86">
+        <div class="rune">1</div>
+        <div class="rung-id"><div class="tag">Paso I</div><div class="ttl">El Clear Perfecto</div></div>
+        <p class="rung-desc">No entres a una partida normal sin dominar el primer pathing. Tu meta: jungla completa con un solo Smite antes del 2:45, dependiendo del campeón.</p>
+        <div class="rung-metrics"><span class="pill">1 Smite</span><span class="pill">≤ 2:45</span></div>
       </article>
-      <article class="quote reveal d1">
-        <div class="mark">“</div>
-        <p>El review de VODs me dolió el ego como nada. Pero fue la primera vez que alguien me hizo responsable de verdad. Ahora juego con calma quirúrgica.</p>
-        <div class="who">
-          <div class="av">L</div>
-          <div class="meta"><div class="nm">Lucía R.</div><div class="rk">Oro II → Maestro</div></div>
-        </div>
+
+      <article class="rung reveal d1" style="--tier:#B07B4E">
+        <div class="rune">2</div>
+        <div class="rung-id"><div class="tag">Paso II</div><div class="ttl">Los 8 Pathings</div></div>
+        <p class="rung-desc">Completa 8 rotaciones consecutivas en herramienta de práctica. Debes terminar en aproximadamente 21:30 a 22:00 minutos manteniendo el tempo perfecto entre campamentos.</p>
+        <div class="rung-metrics"><span class="pill">8 rotaciones</span><span class="pill">21:30-22:00</span></div>
       </article>
-      <article class="quote reveal d2">
-        <div class="mark">“</div>
-        <p>No es una academia de League. Es terapia con pantalla de carga. Salí mejor jugador y, sin querer, mejor persona. Suena cursi. Es real.</p>
-        <div class="who">
-          <div class="av">D</div>
-          <div class="meta"><div class="nm">Diego A.</div><div class="rk">Bronce III → Platino II</div></div>
-        </div>
+
+      <article class="rung reveal d2" style="--tier:#C9CBD0">
+        <div class="rune">3</div>
+        <div class="rung-id"><div class="tag">Paso III</div><div class="ttl">Dominio de Bots</div></div>
+        <p class="rung-desc">Antes de rankear, debes ser capaz de humillar a la IA cumpliendo métricas de Challenger. Si un bot te mata, no estás listo para humanos.</p>
+        <div class="rung-metrics"><span class="pill teal">1v5</span><span class="pill">0 muertes tontas</span></div>
+      </article>
+
+      <article class="rung reveal d3" style="--tier:#33E0C6">
+        <div class="rune">4</div>
+        <div class="rung-id"><div class="tag">Paso IV</div><div class="ttl">Historial Azul</div></div>
+        <p class="rung-desc">Gana de 10 a 20 partidas normales seguidas aplicando la estructura. Sólo cuando tu historial sea una marea azul, estarás listo para subir de elo de forma sólida.</p>
+        <div class="rung-metrics"><span class="pill teal">10-20 wins</span><span class="pill teal">Normales</span></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ================= ACCESO ================= -->
-<section class="block" id="acceso">
+<!-- ================= PRIORIDADES ================= -->
+<section class="block alt" id="prioridades">
   <div class="shell">
     <div class="sec-head reveal">
       <div class="left">
-        <span class="eyebrow gold">// Sin cuenta · Sin pago · 100% local</span>
-        <h2 class="section-title">El Acceso</h2>
-        <p class="lead" style="margin-top:18px">La academia entera está abierta. No vendemos nada, no pedimos tu correo, no hay login. El método completo corre en tu propia máquina — para siempre.</p>
+        <span class="eyebrow gold">// Jerarquía de decisión</span>
+        <h2 class="section-title">Prioridades del Método</h2>
+        <p class="lead" style="margin-top:18px">Según las enseñanzas de DovahNDo, los indicadores de prioridad se dividen en pilares fundamentales del juego y decisiones tácticas según la estructura de jungla que estés ejecutando.</p>
       </div>
-      <div class="num">05</div>
+      <div class="num">06</div>
     </div>
 
-    <div class="access reveal">
-      <div class="access-hero">
-        <div class="price-free">GRATIS</div>
-        <div class="price-strike">€0 para siempre</div>
-        <p class="price-sub">El único precio es el trabajo. Nada más. Aquí no se compra el rango — se gana.</p>
-        <a class="btn btn-primary" href="#top">Entrar a la Academia <span class="arrow">→</span></a>
-        <div class="access-tags">
-          <span class="pill teal">Sin login</span>
-          <span class="pill gold">Sin pago</span>
-          <span class="pill">100% local</span>
-          <span class="pill">Sin anuncios</span>
-        </div>
+    <div class="access-grid reveal">
+      <div class="access-item">
+        <div class="ai-glyph">1</div>
+        <h4>Prioridades generales</h4>
+        <p><span class="teal-em">No morir</span>: mantener presión y no regalar recursos.</p>
+        <p><span class="teal-em">Farmear</span>: oro y, sobre todo, experiencia.</p>
+        <p><span class="teal-em">Tirar torres</span>: avanzar en la disputa territorial.</p>
+        <p><span class="teal-em">Matar</span>: sólo si se traduce en ventaja estructural.</p>
+        <p><span class="teal-em">Dragones y larvas</span>: última prioridad, facilitadores, no condición de victoria.</p>
       </div>
-      <div class="access-grid">
-        <div class="access-item">
-          <div class="ai-glyph">⌘</div>
-          <h4>Todo el método</h4>
-          <p>Las 5 puertas, las 6 teorías y los drills completos. Sin niveles bloqueados ni contenido premium.</p>
-        </div>
-        <div class="access-item">
-          <div class="ai-glyph">⊘</div>
-          <h4>Cero registro</h4>
-          <p>No hay cuentas, ni contraseñas, ni correos. Abres la web y ya estás dentro.</p>
-        </div>
-        <div class="access-item">
-          <div class="ai-glyph">◇</div>
-          <h4>Corre en local</h4>
-          <p>Tu progreso vive en tu propia máquina. Tus datos no salen de ahí. Sin nube, sin rastreo.</p>
-        </div>
-        <div class="access-item">
-          <div class="ai-glyph">∞</div>
-          <h4>Para siempre</h4>
-          <p>Sin permanencia, sin caducidad, sin letra pequeña. Vuelve cuando quieras, las veces que quieras.</p>
-        </div>
+
+      <div class="access-item">
+        <div class="ai-glyph">C</div>
+        <h4>Campana · segundo passing</h4>
+        <p>Prioridad 1: gankear, countergankear o divear botlane.</p>
+        <p>Prioridad 2: invadir jungla enemiga, primero sapo y luego lobos.</p>
+        <p>Prioridad 3: gankear midlane.</p>
+        <p>Prioridad 4: realizar el dragón.</p>
       </div>
+
+      <div class="access-item">
+        <div class="ai-glyph">∞</div>
+        <h4>Infinito · segundo passing</h4>
+        <p>Prioridad 1: gankear toplane.</p>
+        <p>Prioridad 2: invadir rocosos del rival.</p>
+        <p>Prioridad 3: invadir picuchillos del rival.</p>
+        <p>Prioridad 4: gankear midlane.</p>
+        <p>Prioridad 5: realizar las voidgrubs.</p>
+      </div>
+
+      <div class="access-item">
+        <div class="ai-glyph">P</div>
+        <h4>Primer passing y éxito</h4>
+        <p>Saber dónde está el jungla rival es la información más crítica del primer clear.</p>
+        <p>El doble escarabajo es el objetivo principal para ganar ventaja de tiempo y experiencia.</p>
+        <p>Antes de rankear: máximo 20 minutos, 300 farm, nivel 17-19, full build y 3 inhibidores destruidos por ti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= METRICAS ================= -->
+<section class="block" id="metricas">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="left">
+        <span class="eyebrow">// Modo jungla 1v5</span>
+        <h2 class="section-title">Indicadores de Éxito</h2>
+        <p class="lead" style="margin-top:18px">Registra tus resultados manualmente. Si no llegas a estos números, vuelve a entrenar.</p>
+      </div>
+      <div class="num">07</div>
+    </div>
+
+    <div class="proof-stats reveal">
+      <div class="proof-stat"><div class="n teal">20</div><div class="l">Minutos máximo · 18 con Gwen</div></div>
+      <div class="proof-stat"><div class="n gold">300</div><div class="l">Farm · jungla + invades + sides</div></div>
+      <div class="proof-stat"><div class="n teal">17+</div><div class="l">Nivel final antes del nexo</div></div>
+      <div class="proof-stat"><div class="n gold">6</div><div class="l">Ítems terminados + elixir</div></div>
+      <div class="proof-stat"><div class="n crimson">25+</div><div class="l">Kills · dominio total demostrado</div></div>
+      <div class="proof-stat"><div class="n teal">0</div><div class="l">Muertes · los bots no deben matarte</div></div>
+    </div>
+
+    <div class="access-grid reveal d1">
+      <div class="access-item"><div class="ai-glyph">III</div><h4>3 inhibidores</h4><p>Destrúyelos tú solo antes de tirar el Nexo. Ganar por una sola línea no demuestra dominio real del mapa.</p></div>
+      <div class="access-item"><div class="ai-glyph">1v5</div><h4>Control total</h4><p>Si no puedes cumplir estos parámetros contra bots — un entorno controlado — no podrás hacerlo contra humanos.</p></div>
+    </div>
+
+    <!-- Tracker interactivo -->
+    <div class="tracker-block reveal d2">
+      <div class="tracker-title">// Tracker de sesión · marca lo que cumpliste</div>
+      <div class="tracker-grid" id="tracker-grid">
+        <label class="tracker-item" data-key="tk-tiempo"><input type="checkbox" /><span class="tk-check"></span><span>≤ 20 min (18 Gwen)</span></label>
+        <label class="tracker-item" data-key="tk-farm"><input type="checkbox" /><span class="tk-check"></span><span>300 farm</span></label>
+        <label class="tracker-item" data-key="tk-nivel"><input type="checkbox" /><span class="tk-check"></span><span>Nivel 17+</span></label>
+        <label class="tracker-item" data-key="tk-build"><input type="checkbox" /><span class="tk-check"></span><span>Full build</span></label>
+        <label class="tracker-item" data-key="tk-inh"><input type="checkbox" /><span class="tk-check"></span><span>3 inhibidores</span></label>
+        <label class="tracker-item" data-key="tk-kills"><input type="checkbox" /><span class="tk-check"></span><span>25+ kills</span></label>
+        <label class="tracker-item" data-key="tk-0muertes"><input type="checkbox" /><span class="tk-check"></span><span>0 muertes</span></label>
+        <label class="tracker-item" data-key="tk-estructura"><input type="checkbox" /><span class="tk-check"></span><span>Estructura mantenida</span></label>
+      </div>
+      <div class="tracker-verdict" id="tracker-verdict"></div>
+      <button class="tracker-reset" type="button" id="tracker-reset">Resetear sesión</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ERRORES ================= -->
+<section class="block alt" id="errores">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="left">
+        <span class="eyebrow gold">// Checklist de autoevaluación</span>
+        <h2 class="section-title">¿Por Qué No Subes?</h2>
+        <p class="lead" style="margin-top:18px">Anota cada vez que cometas estos errores cíclicos. Si se repiten, no es mala suerte: es falta de estructura.</p>
+      </div>
+      <div class="num">08</div>
+    </div>
+
+    <div class="access-grid reveal">
+      <div class="access-item"><div class="ai-glyph">D</div><h4>Dragonitis</h4><p>¿Priorizaste un dragón innecesario perdiendo campamentos y tempo?</p></div>
+      <div class="access-item"><div class="ai-glyph">R</div><h4>Ruptura de Estructura</h4><p>¿Cambiaste tu ruta, por ejemplo de Infinito a Campana, sin una muerte de por medio?</p></div>
+      <div class="access-item"><div class="ai-glyph">M</div><h4>Ceguera de Mapa</h4><p>¿Pasaste más de 5 segundos sin mirar el minimapa?</p></div>
+      <div class="access-item"><div class="ai-glyph">50</div><h4>Ganks de Suerte</h4><p>¿Forzaste una jugada de 50/50 en lugar de asegurar el 100% de oro en tu jungla?</p></div>
     </div>
   </div>
 </section>
@@ -391,34 +436,37 @@
   <div class="shell">
     <div class="foot-top">
       <div class="foot-brand">
-        <div class="name">Dovah<span>N</span>Do</div>
-        <p>The Fear Academy. El miedo es el primer maestro. Te enseñamos a escucharlo, dominarlo y, al final, agradecerlo.</p>
+        <div class="name">Fear<span>Academy</span></div>
+        <p>El bronce es bronce porque quiere. El conocimiento es poder, pero la disciplina es la victoria. <span class="gold-em">Entrena. Estructura. Domina.</span></p>
       </div>
       <div class="foot-cols">
         <div class="foot-col">
-          <h4>Academia</h4>
-          <a href="#escalera">La Escalera</a>
-          <a href="#teorias">Las Teorías</a>
-          <a href="#maestro">El Maestro</a>
-          <a href="#acceso">Acceso libre</a>
+          <h4>Toolbox</h4>
+          <a href="#proposito">Propósito</a>
+          <a href="#estructuras">Estructuras</a>
+          <a href="#evelynn-infinito">Evelynn Infinito</a>
+          <a href="#decision">Elegir ruta</a>
+          <a href="#progreso">Progreso</a>
+          <a href="#prioridades">Prioridades</a>
         </div>
         <div class="foot-col">
-          <h4>Recursos</h4>
-          <a href="#">Manifiesto</a>
-          <a href="#">Blog de doctrina</a>
-          <a href="#">Glosario</a>
-          <a href="#">FAQ</a>
+          <h4>Entrenamiento</h4>
+          <a href="#errores">Errores cíclicos</a>
+          <a href="#metricas">Tracker manual</a>
+          <a href="#prioridades">Jerarquía de partida</a>
+          <a href="#estructuras">La Campana</a>
+          <a href="#evelynn-infinito">El Infinito</a>
         </div>
         <div class="foot-col">
-          <h4>Contacto</h4>
-          <a href="#"><span class="__cf_email__" data-cfemail="92e1fde2fde0e6f7d2f6fde4f3fafcf6fdbcf5f5">[email&#160;protected]</span></a>
-          <a href="#">Prensa</a>
-          <a href="#">Trabaja con nosotros</a>
+          <h4>Comunidad</h4>
+          <a href="#top">Inicio</a>
+          <a href="#proposito">Manual de consulta</a>
+          <a href="#errores">Autoevaluación</a>
         </div>
       </div>
     </div>
     <div class="foot-bottom">
-      <div class="cr">© MMXXVI DovahNDo · The Fear Academy · No afiliado a Riot Games</div>
+      <div class="cr">© MMXXVI FearAcademy · Tributo comunitario · No afiliado a Riot Games</div>
       <div class="socials">
         <a href="#" title="Discord">DC</a>
         <a href="#" title="Twitch">TW</a>
@@ -429,9 +477,43 @@
   </div>
 </footer>
 
+<div class="meme-modal" data-meme-modal aria-hidden="true">
+  <button class="meme-backdrop" type="button" data-meme-close aria-label="Cerrar meme"></button>
+  <div class="meme-card" role="dialog" aria-modal="true" aria-labelledby="meme-title">
+    <button class="meme-close" type="button" data-meme-close aria-label="Cerrar">×</button>
+    <div class="meme-top" id="meme-title">Yo ignorando 3 campamentos por un dragón sin presión</div>
+    <div class="meme-frame">
+      <div class="meme-map">
+        <div class="meme-side good">
+          <span class="meme-label">Mi jungla</span>
+          <span class="meme-value">oro + xp gratis</span>
+        </div>
+        <div class="meme-side bad">
+          <span class="meme-label">Dragón random</span>
+          <span class="meme-value">flip 50/50</span>
+        </div>
+        <div class="meme-player">yo</div>
+        <div class="meme-arrow-line"></div>
+      </div>
+    </div>
+    <div class="meme-bottom">“Seguro que este objetivo vale más que mi estructura”</div>
+    <div class="meme-priorities">
+      <div class="meme-priority-title">Prioridades reales, por si el dragón te mira bonito</div>
+      <ol>
+        <li><b>No morir:</b> mantener presión y no regalar recursos.</li>
+        <li><b>Farmear:</b> oro y, sobre todo, experiencia.</li>
+        <li><b>Tirar torres:</b> avanzar en la disputa territorial.</li>
+        <li><b>Matar:</b> sólo si convierte el farm en ventaja estructural.</li>
+        <li><b>Dragones y larvas:</b> facilitadores, no condición de victoria.</li>
+      </ol>
+    </div>
+    <p class="meme-note">Recordatorio: si pierdes tempo, campamentos y visión por un objetivo sin presión, no estás jugando macro. <span class="gold-em">Estás regalando tu elo con las dos manos y luego culpas al equipo.</span></p>
+  </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-<script src="scene.js?v=16"></script>
-<script src="main.js?v=10"></script>
+<script src="assets/js/scene.js?v=17"></script>
+<script src="assets/js/main.js?v=11"></script>
 </body>
 </html>
