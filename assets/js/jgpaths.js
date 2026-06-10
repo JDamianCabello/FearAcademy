@@ -12,6 +12,8 @@
   var allEntries   = [];
   var activeFilter = 'all';
   var searchQuery  = '';
+  var currentPage  = 0;
+  var CARDS_PER_PAGE = 6; // 3 rows × 2 cols
 
   /* ── Champion name → Data Dragon key ── */
   var CHAMP_EXCEPTIONS = {
@@ -227,7 +229,9 @@
     }).join('');
   }
 
-  function filterAndRender() {
+  function filterAndRender(resetPage) {
+    if (resetPage) currentPage = 0;
+
     var list = allEntries;
 
     if (activeFilter !== 'all') {
@@ -248,11 +252,50 @@
 
     list = list.slice().sort(function (a, b) { return toSecs(a.time) - toSecs(b.time); });
 
+    var totalPages = Math.max(1, Math.ceil(list.length / CARDS_PER_PAGE));
+    if (currentPage >= totalPages) currentPage = totalPages - 1;
+
     var counter = document.getElementById('jgpaths-count');
     if (counter) counter.textContent = list.length + ' entr' + (list.length === 1 ? 'ada' : 'adas');
 
+    var start   = currentPage * CARDS_PER_PAGE;
+    var pageList = list.slice(start, start + CARDS_PER_PAGE);
+
     var container = document.getElementById('jgpaths-results');
-    if (container) container.innerHTML = renderCards(list);
+    if (!container) return;
+    container.innerHTML = renderCards(pageList);
+
+    // Render pagination controls after the grid
+    var pag = document.getElementById('jgp-pagination');
+    if (!pag) {
+      pag = document.createElement('div');
+      pag.id = 'jgp-pagination';
+      pag.className = 'jgp-pagination';
+      container.parentNode.insertBefore(pag, container.nextSibling);
+    }
+
+    if (totalPages <= 1) {
+      pag.innerHTML = '';
+      return;
+    }
+
+    pag.innerHTML =
+      '<button class="jgp-page-btn" id="jgp-prev"' + (currentPage === 0 ? ' disabled' : '') + '>← Anterior</button>' +
+      '<span class="jgp-page-info">' + (currentPage + 1) + ' / ' + totalPages + '</span>' +
+      '<button class="jgp-page-btn" id="jgp-next"' + (currentPage >= totalPages - 1 ? ' disabled' : '') + '>Siguiente →</button>';
+
+    var prevBtn = document.getElementById('jgp-prev');
+    var nextBtn = document.getElementById('jgp-next');
+    if (prevBtn) prevBtn.addEventListener('click', function () {
+      currentPage--;
+      filterAndRender(false);
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    if (nextBtn) nextBtn.addEventListener('click', function () {
+      currentPage++;
+      filterAndRender(false);
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   }
 
   /* ── Init ── */
@@ -268,7 +311,7 @@
         var totalEl = document.getElementById('jgpaths-total');
         if (totalEl) totalEl.textContent = allEntries.length;
 
-        filterAndRender();
+        filterAndRender(true);
       })
       .catch(function () {
         container.innerHTML = '<div class="jgp-empty">// Error al cargar los datos. Recarga la página.</div>';
@@ -280,7 +323,7 @@
     if (searchEl) {
       searchEl.addEventListener('input', function (e) {
         searchQuery = e.target.value;
-        filterAndRender();
+        filterAndRender(true);
       });
     }
 
@@ -290,7 +333,7 @@
         activeFilter = btn.getAttribute('data-jgp-filter');
         Array.prototype.forEach.call(filterBtns, function (b) { b.classList.remove('active'); });
         btn.classList.add('active');
-        filterAndRender();
+        filterAndRender(true);
       });
     });
 

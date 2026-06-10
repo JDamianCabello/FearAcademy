@@ -458,7 +458,9 @@ a { color: inherit; text-decoration: none; }
   .nav { padding: 14px 18px; }
   .brand .name { font-size: 14px; letter-spacing: 0.12em; }
   .nav-cta { font-size: 10px; padding: 8px 11px; }
-  .hero-inner { padding-top: 64px; }
+  /* Push text to top so Evelynn is visible below */
+  .hero-sticky { align-items: flex-start; }
+  .hero-inner { padding-top: 88px; }
   .hero .eyebrow { margin-bottom: 16px; }
   .hero h1 { font-size: clamp(28px, 9.5vw, 40px); line-height: 1.0; }
   .hero .sub { margin-top: 16px; font-size: 14px; max-width: 100%; line-height: 1.5; }
@@ -1206,6 +1208,46 @@ section.block.alt { background: var(--bg-2); }
 }
 .jgp-video span { transition: transform 0.22s var(--ease); }
 .jgp-video:hover span { transform: translateX(3px); }
+
+/* ── Pagination ── */
+.jgp-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.jgp-page-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line-2);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.22s var(--ease);
+}
+.jgp-page-btn:hover:not(:disabled) {
+  color: var(--teal);
+  border-color: var(--teal-line);
+  background: var(--teal-soft);
+}
+.jgp-page-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+.jgp-page-info {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--muted-2);
+  min-width: 60px;
+  text-align: center;
+}
 
 /* ── States ── */
 .jgp-loading,
