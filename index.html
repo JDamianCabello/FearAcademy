@@ -3,12 +3,70 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>FearAcademy — Domina la estructura</title>
+<title>FearAcademy — Método DovahNDo · Estructuras de Jungla LoL S16</title>
+<meta name="description" content="Aprende las estructuras de jungla con el Método DovahNDo. La Campana, El Infinito, JG Paths database S16 con 150+ clears por campeón, tracker de métricas y escalera de progreso para League of Legends." />
+<meta name="keywords" content="jungle paths LoL, estructuras de jungla, método DovahNDo, clear jungla S16, Evelynn jungle, FearAcademy, League of Legends jungla, jg paths, rutas jungla" />
+<meta name="author" content="FearAcademy" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="FearAcademy — Domina la Jungla · Método DovahNDo" />
+<meta property="og:description" content="Estructuras de jungla, JG Paths S16 con 150+ clears documentados y tracker de progreso para League of Legends. Deja de improvisar." />
+<meta property="og:image" content="assets/media/icon.png" />
+<meta property="og:locale" content="es_ES" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="FearAcademy — Método DovahNDo · JG Paths S16" />
+<meta name="twitter:description" content="Estructuras de jungla, 150+ clears documentados y tracker de progreso para LoL. Deja de improvisar." />
 <link rel="icon" type="image/png" href="assets/media/icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Sora:wght@200;300;400;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css?v=12" />
+<link rel="stylesheet" href="assets/css/styles.css?v=13" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "FearAcademy",
+  "description": "Método DovahNDo: estructuras de jungla, JG Paths S16 y entrenamiento para League of Legends",
+  "inLanguage": "es",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "/#training?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el Método DovahNDo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Método DovahNDo es un sistema de entrenamiento para la jungla de League of Legends basado en dos estructuras: La Campana (presión y tempo) y El Infinito (escalado supremo para campeones R-dependientes como Evelynn)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre La Campana y El Infinito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Campana empieza en Blue y es ideal para campeones con ganks eficaces desde nivel 4. El Infinito empieza en Picuchillos y está diseñada para campeones R-dependientes que necesitan llegar al nivel 6 lo antes posible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué métricas debo cumplir antes de entrar a ranked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Antes de rankear debes cumplir: máximo 20 minutos en partida de bots, 300 farm, nivel 17+, full build, 3 inhibidores destruidos y 25+ kills sin morir. Si no llegas a estos números, vuelve a entrenar."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -26,6 +84,7 @@
     <a href="#progreso">Progreso</a>
     <a href="#prioridades">Prioridades</a>
     <a href="#metricas">Métricas</a>
+    <a href="#training">Training</a>
   </div>
 </nav>
 
@@ -431,6 +490,79 @@
   </div>
 </section>
 
+<!-- ================= TRAINING / JG PATHS ================= -->
+<section class="block" id="training">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="left">
+        <span class="eyebrow">// Herramientas de entrenamiento · S16</span>
+        <h2 class="section-title">Training Lab</h2>
+        <p class="lead" style="margin-top:18px">Base de datos de <span id="jgpaths-total">150</span>+ clears documentados para la temporada 16. Busca por campeón, filtra por tier y accede al vídeo de referencia directamente.</p>
+      </div>
+      <div class="num">09</div>
+    </div>
+
+    <div class="jgp-section-head reveal d1">
+      <span class="eyebrow gold">// JG Paths · Clears S16</span>
+      <p class="jgp-disclaimer">Los clears con homeguard son ~2s más rápidos en la herramienta de práctica que en partida real.</p>
+    </div>
+
+    <div class="jgp-controls reveal d1">
+      <div class="jgp-search-wrap">
+        <span class="jgp-search-icon" aria-hidden="true">⌕</span>
+        <input
+          class="jgp-search"
+          id="jgpaths-search"
+          type="search"
+          placeholder="Buscar campeón, creador o ruta…"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Buscar en JG Paths database"
+        />
+      </div>
+      <div class="jgp-filters" role="group" aria-label="Filtrar por categoría">
+        <button class="jgp-filter active" data-jgp-filter="all">Todos</button>
+        <button class="jgp-filter" data-jgp-filter="meta">Meta</button>
+        <button class="jgp-filter" data-jgp-filter="off-meta">Off-Meta</button>
+        <button class="jgp-filter" data-jgp-filter="non-meta">No Meta</button>
+      </div>
+      <span class="jgp-counter" id="jgpaths-count" aria-live="polite">—</span>
+    </div>
+
+    <div class="jgp-grid" id="jgpaths-results" aria-live="polite">
+      <div class="jgp-loading">// Cargando base de datos S16…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEO MODAL ================= -->
+<div class="vid-modal" id="vid-modal" aria-hidden="true">
+  <button class="vid-backdrop" type="button" id="vid-close" aria-label="Cerrar vídeo"></button>
+  <div class="vid-dialog" role="dialog" aria-modal="true" aria-labelledby="vid-title">
+    <div class="vid-header">
+      <span class="vid-title" id="vid-title"></span>
+      <button class="vid-close-btn" type="button" id="vid-close-btn" aria-label="Cerrar">×</button>
+    </div>
+    <div class="vid-frame-wrap">
+      <div class="vid-loading" id="vid-loading">
+        <span class="vid-loading-icon">🗡️</span>
+        <span class="vid-loading-text">// Hemos ido a gankear el vídeo</span>
+        <span class="vid-loading-sub">Invadiendo el servidor… un momento</span>
+      </div>
+      <iframe
+        id="vid-iframe"
+        class="vid-iframe"
+        src=""
+        title="JG Path vídeo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <a class="vid-external" id="vid-external" href="#" target="_blank" rel="noopener noreferrer">Abrir en YouTube/Bilibili →</a>
+  </div>
+</div>
+
 <!-- ================= FOOTER ================= -->
 <footer class="foot">
   <div class="shell">
@@ -451,6 +583,7 @@
         </div>
         <div class="foot-col">
           <h4>Entrenamiento</h4>
+          <a href="#training">JG Paths S16</a>
           <a href="#errores">Errores cíclicos</a>
           <a href="#metricas">Tracker manual</a>
           <a href="#prioridades">Jerarquía de partida</a>
@@ -515,5 +648,6 @@
 <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 <script src="assets/js/scene.js?v=17"></script>
 <script src="assets/js/main.js?v=11"></script>
+<script src="assets/js/jgpaths.js?v=1"></script>
 </body>
 </html>

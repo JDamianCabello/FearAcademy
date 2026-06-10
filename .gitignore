@@ -27,6 +27,7 @@ desktop.ini
 .vscode/
 .idea/
 .claude/
+CLAUDE.md
 
 # Temporary files
 *.tmp
