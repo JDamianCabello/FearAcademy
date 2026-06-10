@@ -718,7 +718,8 @@ section.block.alt { background: var(--bg-2); }
 .quote .who .av { width: 38px; height: 38px; border: 1px solid var(--line-2); display: grid; place-items: center; font-family: var(--display); font-weight: 700; color: var(--gold); font-size: 14px; }
 .quote .who .meta .nm { font-size: 13.5px; color: var(--text); }
 .quote .who .meta .rk { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-2); margin-top: 2px; }
-@media (max-width: 880px) { .quotes { grid-template-columns: 1fr; } }
+@media (max-width: 880px) { .quotes { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .quotes { grid-template-columns: 1fr; } }
 
 /* ============================================================
    PRICING
