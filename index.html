@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Sora:wght@200;300;400;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css?v=14" />
+<link rel="stylesheet" href="assets/css/styles.css?v=16" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -105,7 +105,7 @@
         <div class="hero-cta">
           <a class="btn btn-primary" href="#estructuras">Ver estructuras <span class="arrow">→</span></a>
           <a class="btn btn-ghost" href="#metricas">Tracker 1v5</a>
-          <button class="btn btn-meme" type="button" data-meme-open>Objetivos primero</button>
+          <button class="btn btn-meme" type="button" id="meme-open">Objetivos primero</button>
         </div>
       </div>
     </div>
@@ -676,7 +676,7 @@
       <iframe
         id="vid-iframe"
         class="vid-iframe"
-        src=""
+        src="about:blank"
         title="JG Path vídeo"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -734,44 +734,11 @@
   </div>
 </footer>
 
-<div class="meme-modal" data-meme-modal aria-hidden="true">
-  <button class="meme-backdrop" type="button" data-meme-close aria-label="Cerrar meme"></button>
-  <div class="meme-card" role="dialog" aria-modal="true" aria-labelledby="meme-title">
-    <button class="meme-close" type="button" data-meme-close aria-label="Cerrar">×</button>
-    <div class="meme-top" id="meme-title">Yo ignorando 3 campamentos por un dragón sin presión</div>
-    <div class="meme-frame">
-      <div class="meme-map">
-        <div class="meme-side good">
-          <span class="meme-label">Mi jungla</span>
-          <span class="meme-value">oro + xp gratis</span>
-        </div>
-        <div class="meme-side bad">
-          <span class="meme-label">Dragón random</span>
-          <span class="meme-value">flip 50/50</span>
-        </div>
-        <div class="meme-player">yo</div>
-        <div class="meme-arrow-line"></div>
-      </div>
-    </div>
-    <div class="meme-bottom">“Seguro que este objetivo vale más que mi estructura”</div>
-    <div class="meme-priorities">
-      <div class="meme-priority-title">Prioridades reales, por si el dragón te mira bonito</div>
-      <ol>
-        <li><b>No morir:</b> mantener presión y no regalar recursos.</li>
-        <li><b>Farmear:</b> oro y, sobre todo, experiencia.</li>
-        <li><b>Tirar torres:</b> avanzar en la disputa territorial.</li>
-        <li><b>Matar:</b> sólo si convierte el farm en ventaja estructural.</li>
-        <li><b>Dragones y larvas:</b> facilitadores, no condición de victoria.</li>
-      </ol>
-    </div>
-    <p class="meme-note">Recordatorio: si pierdes tempo, campamentos y visión por un objetivo sin presión, no estás jugando macro. <span class="gold-em">Estás regalando tu elo con las dos manos y luego culpas al equipo.</span></p>
-  </div>
-</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 <script src="assets/js/scene.js?v=17"></script>
-<script src="assets/js/main.js?v=11"></script>
+<script src="assets/js/main.js?v=18"></script>
 <script src="assets/js/jgpaths.js?v=1"></script>
 </body>
 </html>
